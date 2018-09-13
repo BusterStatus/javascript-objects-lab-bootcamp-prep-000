@@ -9,6 +9,15 @@ function destructivelyUpdateObjectWithKeyAndValue (object, key, value) {
   return object;
 }
 
+function deleteFromObjectByKey (object, key) {
+  var newRecipes = object.assign({}, recipes);
+  delete newRecipes[key];
+}
+
+function destructivelyDeleteFromObjectByKey (object, key) {
+  delete object[key];
+}
+
 /*global describe, it */
 
 describe('Objects', function() {
